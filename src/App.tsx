@@ -277,7 +277,7 @@ const Gallery = () => {
 const Menu = () => {
   const items = [
     {
-      name: "Classic Belgian",
+      name: "Classic Belgian Waffle",
       price: "₹199",
       desc: "Traditional golden waffle served with locally sourced honey & whipped butter.",
       img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDO6yW7Mrn89ZZFgWUBQrrM6EGCJjmr-MIJlNm6HVoaJucGlhVDy54sb6qnmpkukRRDlkJ9b1geUwKZwRP7z6UUvRV4VsRYnMAwo4EfdH73BeltroRuSX6NW8Xsso9rchbNwM65yFFp0goubilX_9ePMawftQ78oCq6CnXWedoanSnQ7MrAoeRfgbeJ94pWTA9u-fBMUUJ6U_x2knqrPEGHoWOCO7K_tcnWK9NTVFdieCIEsGmyijc8BOTxWc268Vfrn7QLm23tjE8e"
@@ -290,13 +290,13 @@ const Menu = () => {
       offset: true
     },
     {
-      name: "Chocolate Lava",
+      name: "Triple Chocolate king",
       price: "₹249",
       desc: "Decadent double chocolate batter with a signature molten core.",
       img: "https://lh3.googleusercontent.com/aida-public/AB6AXuChw6qB8iNk1hGgv2MoEl4ZVbxsgrnRoguD435r2CU9lQbYLD95_ORmf6rqzhlYXxQFFSn8Eixg29ZH3fBoviBVVKYHzKnkxbMDucNviqtZzxNPwvki6n5YK9mZU0h6WcTENPbbHZklBx6Oy8L4XntMvE8UKCVGMt3G4N1KM9G9RMSKBS1v6JJEDVvZN40FxgCZQJo5ea2Dcn9neJJTv7PNhaz7KIbxtcVKEGHBrDUvccgf57APRubjVamxOhH5NUhkV_U2fe7eMEy2"
     },
     {
-      name: "Savory Cheese",
+      name: "The lightest waffle",
       price: "₹189",
       desc: "Infused with sharp cheddar and artisanal herbs for a sophisticated bite.",
       img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD2dOR8j586y6_PU6g1vmZ76Ppj9KqyQHLA9ElfiOmcTueNSu7Itt_thjIPJwx-5pvLn_P8ChS1uY6XlC-KH-9keYz5JEH4K9rOgdIyt1Dpt5uyk4-7GWhi6NEgJYo6jGmdRhEJs6XwrY_3sCu3HtYFyKJ5LuOkyArnTfysaWN2Byt6Qu_lSFVQJfOHDtXvrNn6owSTz43p2V4mUAkQy8jThvSNmwQ-fvmCOryxFFSuDas6riF5KVTMOQ8pz6YE3kKJiV7SGQaTOcLq",
