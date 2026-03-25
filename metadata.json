@@ -1,0 +1,7 @@
+{
+  "name": "Waflie | Poetry in Every Bite",
+  "description": "Gwalior's finest artisanal patisserie serving freshly ironed waffles in a soulful pastel haven.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
