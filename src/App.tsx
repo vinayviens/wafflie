@@ -76,28 +76,28 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${isScrolled ? "bg-white/80 backdrop-blur-md py-4 shadow-sm" : "bg-transparent py-6"}`}>
-      <div className="max-w-[1920px] mx-auto px-8 md:px-20 flex justify-between items-center">
-        <div className="text-3xl font-headline font-semibold tracking-tight text-primary cursor-pointer hover:opacity-80 transition-opacity">
+    <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${isScrolled ? "bg-white/80 backdrop-blur-md py-3 shadow-sm" : "bg-transparent py-4"}`}>
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-8 md:px-20 flex justify-between items-center">
+        <div className="text-2xl sm:text-3xl font-headline font-semibold tracking-tight text-primary cursor-pointer hover:opacity-80 transition-opacity">
           Waflie
         </div>
 
-        <div className="hidden md:flex gap-12 items-center font-body text-[13px] uppercase tracking-[0.2em] font-medium text-primary/70">
+        <div className="hidden md:flex gap-8 lg:gap-12 items-center font-body text-[11px] sm:text-[13px] uppercase tracking-[0.2em] font-medium text-primary/70">
           <a href="#" className="editorial-link text-primary">Home</a>
           <a href="#menu" className="editorial-link hover:text-primary transition-colors">Menu</a>
           <a href="#about" className="editorial-link hover:text-primary transition-colors">About</a>
           <a href="#contact" className="editorial-link hover:text-primary transition-colors">Contact</a>
         </div>
 
-        <div className="flex items-center gap-8">
-          <div className="hidden lg:flex flex-col items-end text-[11px] uppercase tracking-widest text-primary/60 font-medium">
+        <div className="flex items-center gap-4 sm:gap-8">
+          <div className="hidden lg:flex flex-col items-end text-[10px] sm:text-[11px] uppercase tracking-widest text-primary/60 font-medium">
             <span>Vinay Nagar, Gwalior</span>
             <span>+91 7987486964</span>
           </div>
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-3 px-6 py-2.5 bg-primary text-white rounded-full text-[11px] uppercase tracking-widest font-bold hover:bg-secondary transition-all duration-300 soft-shadow"
+            className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-2.5 bg-primary text-white rounded-full text-[10px] sm:text-[11px] uppercase tracking-widest font-bold hover:bg-secondary transition-all duration-300 soft-shadow"
           >
             <span>Say Thanks</span>
             <Heart size={14} fill="currentColor" />
@@ -130,22 +130,22 @@ const Hero = () => {
   const heroSocials = socialPlatforms.filter((platform) => ["Instagram", "Swiggy"].includes(platform.name));
 
   return (
-    <section className="relative min-h-[95vh] flex items-center pt-24 overflow-hidden bg-surface-bright">
+    <section className="relative min-h-screen md:min-h-[95vh] flex items-center pt-20 md:pt-24 overflow-hidden bg-surface-bright">
       <div className="absolute inset-0 waffle-texture opacity-60"></div>
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-8 md:px-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="lg:col-span-5 z-20"
         >
-          <span className="inline-block text-[12px] uppercase tracking-[0.4em] text-secondary font-semibold mb-6 opacity-80">Gwalior's Finest Pâtisserie</span>
-          <h1 className="text-7xl md:text-[100px] font-headline font-bold text-primary mb-8 leading-[0.9] tracking-tighter">
+          <span className="inline-block text-[10px] sm:text-[12px] uppercase tracking-[0.4em] text-secondary font-semibold mb-4 sm:mb-6 opacity-80">Gwalior's Finest Pâtisserie</span>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[100px] font-headline font-bold text-primary mb-6 sm:mb-8 leading-[0.9] tracking-tighter">
             Poetry <br />
-            <span className="italic font-normal text-secondary/80 ml-8">in every</span><br />
+            <span className="italic font-normal text-secondary/80 ml-4 sm:ml-8">in every</span><br />
             Bite.
           </h1>
-          <p className="text-lg md:text-xl font-body text-on-surface-variant/80 mb-12 max-w-md leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl font-body text-on-surface-variant/80 mb-10 sm:mb-12 max-w-md leading-relaxed">
             When words fail, our waffles speak the language of soul. Freshly ironed, warmly served.
           </p>
           <div className="flex flex-col items-start gap-4">
@@ -155,7 +155,7 @@ const Hero = () => {
               href={zomato?.href ?? "#"}
               target={zomato?.href?.startsWith("http") ? "_blank" : undefined}
               rel={zomato?.href?.startsWith("http") ? "noreferrer" : undefined}
-              className="group relative inline-flex items-center gap-3 px-10 py-5 text-white rounded-full font-bold text-[13px] uppercase tracking-widest transition-all soft-shadow"
+              className="group relative inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-10 py-4 sm:py-5 text-white rounded-full font-bold text-[11px] sm:text-[13px] uppercase tracking-widest transition-all soft-shadow"
               style={{ backgroundColor: zomato?.brandColor ?? "#E23744" }}
             >
               {zomato && <zomato.Icon size={17} />}
@@ -191,10 +191,10 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="lg:col-span-7 relative flex justify-end"
+          className="lg:col-span-7 relative flex justify-center lg:justify-end mt-8 lg:mt-0"
         >
-          <div className="relative w-full aspect-[4/5] max-w-lg">
-            <div className="absolute inset-0 rounded-[2rem] overflow-hidden soft-shadow z-10 transform translate-x-4">
+          <div className="relative w-full max-w-sm lg:max-w-lg aspect-[3/4] lg:aspect-[4/5]">
+            <div className="absolute inset-0 rounded-2xl lg:rounded-[2rem] overflow-hidden soft-shadow z-10 transform lg:translate-x-4">
               <img 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyFKy2l2RWgSgB0Yq4lU0a1VZxW0zwZnKDw66FUlC7mWkjirI1IA46NCxBS3CPLFwlmKaS8ll-9BzHmU4ZTBUBmxSvsSyDiNgYQapFZj-O00mEL2htD1QF5Tj_cxLs6U6RGg1z5ESHRR6I3uPO4woZA9H27nZqOhpkPQbSRg7FJFvJd0TVjsejvOtbvzA_tveq1tTbCwrM6reIoehQo8xGQTNnPI2M9u3e4qAudOn_zDn2oGJZDKLk8Ob_QA-zbi24wOCE1jMxt6A5" 
                 alt="Glistening waffles" 
@@ -206,7 +206,7 @@ const Hero = () => {
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="absolute -bottom-12 -left-20 w-64 h-80 rounded-[1.5rem] overflow-hidden border-[12px] border-white soft-shadow z-20 hidden md:block"
+              className="absolute -bottom-8 -left-12 md:-bottom-12 md:-left-20 w-40 h-48 md:w-64 md:h-80 rounded-xl md:rounded-[1.5rem] overflow-hidden border-8 md:border-[12px] border-white soft-shadow z-20 hidden sm:block"
             >
               <img 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDszXvzD3ffZ7uzCd7LJMUJ0EMtOzjiz2OHQN-yTDoCrf0sq0xVYzo2SHOSxLBq3zSebiJOk3lcUhVztEbSYi24nIWh48ps4PWJp0xkCGVt9ogmdR5-wFl8QyBXId3eS1QDfi-wSvGhgahSQ83HazmThxh7EQ5AnWJIABrffpbbT09oM06yJRmO4yOlpTmgFSFU7h5cQteLMLwGHzNvDj-hXV63IG1m2yl-iilg0hRlfNeT0iyOHAmBAMKBk_j2DCcp8GWV1-mLDYrH" 
@@ -226,11 +226,11 @@ const Hero = () => {
 const Gallery = () => {
   return (
     <section className="py-32 bg-white">
-      <div className="max-w-[1400px] mx-auto px-8">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6 md:gap-8">
           <div className="max-w-xl">
             <span className="text-xs uppercase tracking-[0.4em] text-secondary font-bold mb-4 block">Visual Diary</span>
-            <h2 className="text-5xl md:text-6xl font-headline font-bold text-primary leading-tight">Capturing the <br /><span className="italic font-normal">Soul of Waflie</span></h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-headline font-bold text-primary leading-tight">Capturing the <br /><span className="italic font-normal">Soul of Waflie</span></h2>
           </div>
           <a href="#" className="editorial-link uppercase text-xs tracking-[0.3em] font-bold text-primary mb-2">View Gallery</a>
         </div>
@@ -305,18 +305,18 @@ const Menu = () => {
   ];
 
   return (
-    <section id="menu" className="py-32 bg-surface-container-low/50">
-      <div className="max-w-[1400px] mx-auto px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-headline font-bold text-primary mb-6">The Waffle Collection</h2>
-          <div className="flex flex-wrap justify-center gap-10 mt-12 text-[11px] uppercase tracking-[0.3em] font-bold text-primary/40">
+    <section id="menu" className="py-20 sm:py-32 bg-surface-container-low/50">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8">
+        <div className="text-center mb-12 sm:mb-20">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-headline font-bold text-primary mb-4 sm:mb-6">The Waffle Collection</h2>
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 mt-8 sm:mt-12 text-[9px] sm:text-[11px] uppercase tracking-[0.3em] font-bold text-primary/40">
             <button className="text-primary border-b border-primary pb-2">All Creations</button>
             <button className="hover:text-primary transition-colors pb-2">Sweet Notes</button>
             <button className="hover:text-primary transition-colors pb-2">Savory Tales</button>
             <button className="hover:text-primary transition-colors pb-2">Vegan Choice</button>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-x-12 sm:gap-y-20">
           {items.map((item, idx) => (
             <motion.div 
               key={idx}
@@ -324,9 +324,9 @@ const Menu = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className={`group cursor-pointer ${item.offset ? "lg:translate-y-12" : ""}`}
+              className={`group cursor-pointer ${item.offset ? "sm:translate-y-0 lg:translate-y-12" : ""}`}
             >
-              <div className="aspect-[4/5] overflow-hidden rounded-xl bg-white mb-8 soft-shadow-sm group-hover:soft-shadow transition-all duration-500">
+              <div className="aspect-[3/4] sm:aspect-[4/5] overflow-hidden rounded-xl bg-white mb-4 sm:mb-8 soft-shadow-sm group-hover:soft-shadow transition-all duration-500">
                 <img 
                   src={item.img} 
                   alt={item.name} 
@@ -334,11 +334,11 @@ const Menu = () => {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="flex justify-between items-baseline border-b border-primary/10 pb-4 mb-4">
-                <h3 className="text-2xl font-headline font-medium text-primary">{item.name}</h3>
-                <span className="text-sm font-body text-secondary font-bold">{item.price}</span>
+              <div className="flex justify-between items-baseline border-b border-primary/10 pb-3 sm:pb-4 mb-3 sm:mb-4">
+                <h3 className="text-xl sm:text-2xl font-headline font-medium text-primary">{item.name}</h3>
+                <span className="text-xs sm:text-sm font-body text-secondary font-bold">{item.price}</span>
               </div>
-              <p className="text-sm font-body text-on-surface-variant/70 leading-relaxed mb-6">{item.desc}</p>
+              <p className="text-xs sm:text-sm font-body text-on-surface-variant/70 leading-relaxed mb-4 sm:mb-6">{item.desc}</p>
               <button className="editorial-link text-[11px] uppercase tracking-widest font-bold text-primary">Add to Curation</button>
             </motion.div>
           ))}
@@ -350,9 +350,9 @@ const Menu = () => {
 
 const About = () => {
   return (
-    <section id="about" className="relative py-40 overflow-hidden">
+    <section id="about" className="relative py-20 sm:py-40 overflow-hidden">
       <div className="absolute inset-0 bg-primary/5 -z-10"></div>
-      <div className="max-w-[1400px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         <div className="relative order-2 lg:order-1">
           <div className="aspect-square bg-white rounded-3xl soft-shadow p-4 relative overflow-hidden">
             <img 
@@ -365,23 +365,23 @@ const About = () => {
           <div className="absolute -top-12 -right-12 w-48 h-48 bg-secondary-container/50 rounded-full blur-2xl -z-10"></div>
         </div>
         <div className="order-1 lg:order-2">
-          <span className="text-[12px] uppercase tracking-[0.5em] text-secondary font-bold mb-6 block">Our Essence</span>
-          <h2 className="text-5xl md:text-6xl font-headline font-bold text-primary mb-10 leading-tight">Your Pastel Haven <br />in Gwalior</h2>
-          <p className="text-xl font-headline italic text-on-surface-variant/80 mb-12 leading-relaxed border-l-2 border-primary-container pl-8">
+          <span className="text-[10px] sm:text-[12px] uppercase tracking-[0.5em] text-secondary font-bold mb-4 sm:mb-6 block">Our Essence</span>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-headline font-bold text-primary mb-6 sm:mb-10 leading-tight">Your Pastel Haven <br />in Gwalior</h2>
+          <p className="text-lg sm:text-xl font-headline italic text-on-surface-variant/80 mb-8 sm:mb-12 leading-relaxed border-l-2 border-primary-container pl-4 sm:pl-8">
             "Waflie is a pocket of quiet joy in Vinay Nagar. A place where every batch is a conversation, and every plate is a labor of love."
           </p>
-          <div className="grid grid-cols-3 gap-12 pt-8 border-t border-primary/10">
+          <div className="grid grid-cols-3 gap-6 sm:gap-12 pt-6 sm:pt-8 border-t border-primary/10">
             <div>
-              <div className="text-3xl font-headline font-bold text-primary mb-1">100%</div>
-              <div className="text-[10px] uppercase tracking-widest font-bold opacity-50">Artisanal</div>
+              <div className="text-2xl sm:text-3xl font-headline font-bold text-primary mb-1">100%</div>
+              <div className="text-[8px] sm:text-[10px] uppercase tracking-widest font-bold opacity-50">Artisanal</div>
             </div>
             <div>
-              <div className="text-3xl font-headline font-bold text-primary mb-1">Daily</div>
-              <div className="text-[10px] uppercase tracking-widest font-bold opacity-50">Fresh Baked</div>
+              <div className="text-2xl sm:text-3xl font-headline font-bold text-primary mb-1">Daily</div>
+              <div className="text-[8px] sm:text-[10px] uppercase tracking-widest font-bold opacity-50">Fresh Baked</div>
             </div>
             <div>
-              <div className="text-3xl font-headline font-bold text-primary mb-1">#1</div>
-              <div className="text-[10px] uppercase tracking-widest font-bold opacity-50">Destination</div>
+              <div className="text-2xl sm:text-3xl font-headline font-bold text-primary mb-1">#1</div>
+              <div className="text-[8px] sm:text-[10px] uppercase tracking-widest font-bold opacity-50">Destination</div>
             </div>
           </div>
         </div>
@@ -392,12 +392,12 @@ const About = () => {
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-32 bg-white">
-      <div className="max-w-[1400px] mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+    <section id="contact" className="py-20 sm:py-32 bg-white">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-20">
           <div className="lg:col-span-5">
-            <h2 className="text-5xl font-headline font-bold text-primary mb-8">Let's Connect</h2>
-            <p className="text-on-surface-variant/70 mb-12 max-w-sm">Planning an event or just want to say hi? Reach out to us through the form or our socials.</p>
+            <h2 className="text-4xl sm:text-5xl font-headline font-bold text-primary mb-6 sm:mb-8">Let's Connect</h2>
+            <p className="text-sm sm:text-base text-on-surface-variant/70 mb-8 sm:mb-12 max-w-sm">Planning an event or just want to say hi? Reach out to us through the form or our socials.</p>
             <form className="space-y-10" onSubmit={(e) => e.preventDefault()}>
               <div className="group relative">
                 <input type="text" id="name" placeholder="Full Name" className="w-full bg-transparent border-0 border-b border-primary/10 py-4 focus:ring-0 focus:border-primary transition-colors peer placeholder-transparent" />
@@ -411,22 +411,22 @@ const Contact = () => {
                 <textarea id="message" placeholder="Your Message" rows={1} className="w-full bg-transparent border-0 border-b border-primary/10 py-4 focus:ring-0 focus:border-primary transition-colors peer placeholder-transparent resize-none"></textarea>
                 <label htmlFor="message" className="absolute left-0 top-4 text-xs uppercase tracking-widest font-bold text-primary/40 transition-all peer-focus:-top-4 peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-4">Message</label>
               </div>
-              <button className="w-full py-5 bg-primary text-white rounded-xl text-[12px] uppercase tracking-[0.3em] font-bold soft-shadow hover:bg-secondary transition-all">
+              <button className="w-full py-4 sm:py-5 bg-primary text-white rounded-xl text-[11px] sm:text-[12px] uppercase tracking-[0.3em] font-bold soft-shadow hover:bg-secondary transition-all">
                 Send Inquiry
               </button>
             </form>
-            <div className="mt-20 space-y-6">
-              <div className="flex items-center gap-6 text-[13px] font-medium text-primary">
-                <Clock size={20} />
+            <div className="mt-12 sm:mt-20 space-y-4 sm:space-y-6">
+              <div className="flex items-center gap-4 sm:gap-6 text-[11px] sm:text-[13px] font-medium text-primary">
+                <Clock size={18} className="flex-shrink-0" />
                 <span className="tracking-wide">Mon-Sun: 10:00 AM — 10:00 PM</span>
               </div>
-              <div className="flex items-center gap-6 text-[13px] font-medium text-primary">
-                <MapPin size={20} />
+              <div className="flex items-center gap-4 sm:gap-6 text-[11px] sm:text-[13px] font-medium text-primary">
+                <MapPin size={18} className="flex-shrink-0" />
                 <span className="tracking-wide">Vinay Nagar, Gwalior, MP</span>
               </div>
             </div>
           </div>
-          <div className="lg:col-span-7 h-[600px] bg-surface-container-low rounded-[2rem] overflow-hidden soft-shadow group">
+          <div className="lg:col-span-7 h-80 sm:h-[500px] md:h-[600px] bg-surface-container-low rounded-2xl sm:rounded-[2rem] overflow-hidden soft-shadow group">
             <div className="h-full w-full grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 relative">
               <img 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrUXhfHz7B6kwAI2Xembczl0p3CH69KLf_-tfr8FUnhhSlIEWqQEKHz_izz80DP9XIcsrX38hnG7P7Tr2iuWZ8YX_K2KgJhVkVTfnu1s89H2ceRCGebBQ-Hl6ZbRG3viIW2VJuO6SDieDQ3psKw9c5Yx4SlRw_uANMa_wikNZw8jZgx9I8uYoW41yEuoctTGUWfHCJhGlGbbb7QdI52RhxediRsMZY1ZJtLQmkL4uoINYln7Xa1e02YDb1Q1nfruT01_ZDQZJXbGiU" 
@@ -448,19 +448,19 @@ const Contact = () => {
 
 const SocialPlatformsSection = () => {
   return (
-    <section className="relative py-28 overflow-hidden bg-surface-container-low/40">
+    <section className="relative py-20 sm:py-28 overflow-hidden bg-surface-container-low/40">
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-white/80 to-transparent pointer-events-none"></div>
-      <div className="max-w-[1400px] mx-auto px-8 relative">
-        <div className="text-center mb-14">
-          <span className="text-[11px] uppercase tracking-[0.35em] text-secondary font-bold mb-4 block">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8 relative">
+        <div className="text-center mb-10 sm:mb-14">
+          <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-secondary font-bold mb-3 sm:mb-4 block">
             Find Waflie Everywhere
           </span>
-          <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-headline font-bold text-primary">
             Follow, Order, and Stay in the Loop
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {socialPlatforms.map((platform, idx) => (
             <motion.a
               key={platform.name}
@@ -477,23 +477,23 @@ const SocialPlatformsSection = () => {
                 boxShadow: `0 12px 32px -18px ${hexToRgba(platform.brandColor, 0.5)}`,
               }}
             >
-              <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-105"
+              <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 transition-transform group-hover:scale-105"
                 style={{
                   background: `linear-gradient(135deg, ${hexToRgba(platform.accent, 0.16)}, ${hexToRgba(platform.brandColor, 0.2)})`,
                   color: platform.brandColor,
                 }}
               >
-                <platform.Icon size={28} />
+                <platform.Icon size={24} className="sm:w-7 sm:h-7" />
               </div>
 
-              <h3 className="text-2xl font-headline font-semibold text-primary mb-2">
+              <h3 className="text-lg sm:text-2xl font-headline font-semibold text-primary mb-1 sm:mb-2">
                 {platform.name}
               </h3>
-              <p className="text-sm font-body text-on-surface-variant/75 mb-5">
+              <p className="text-xs sm:text-sm font-body text-on-surface-variant/75 mb-3 sm:mb-5">
                 {platform.handle}
               </p>
 
-              <div className="text-[11px] uppercase tracking-[0.25em] font-bold"
+              <div className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] font-bold"
                 style={{ color: platform.brandColor }}
               >
                 {platform.href === "#" ? "Link Coming Soon" : "Visit Now"}
@@ -508,18 +508,18 @@ const SocialPlatformsSection = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-primary/5 pt-32 pb-16">
-      <div className="max-w-[1400px] mx-auto px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-20 pb-20 border-b border-primary/10">
-          <div className="col-span-1 md:col-span-2">
-            <div className="text-4xl font-headline font-bold text-primary mb-8">Waflie</div>
-            <p className="text-on-surface-variant/70 max-w-sm leading-relaxed text-sm">
+    <footer className="bg-primary/5 pt-20 sm:pt-32 pb-12 sm:pb-16">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-16 md:gap-20 pb-12 sm:pb-20 border-b border-primary/10">
+          <div className="col-span-1 sm:col-span-2 md:col-span-2">
+            <div className="text-3xl sm:text-4xl font-headline font-bold text-primary mb-4 sm:mb-8">Waflie</div>
+            <p className="text-on-surface-variant/70 max-w-sm leading-relaxed text-xs sm:text-sm">
               Refined tastes, aesthetic moments, and the finest waffles in Gwalior. A boutique cafe experience designed for the soul.
             </p>
           </div>
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.3em] font-bold text-primary mb-8">Connect</h4>
-            <div className="flex flex-col gap-4 text-sm font-medium">
+            <h4 className="text-[9px] sm:text-[11px] uppercase tracking-[0.3em] font-bold text-primary mb-4 sm:mb-8">Connect</h4>
+            <div className="flex flex-col gap-3 sm:gap-4 text-xs sm:text-sm font-medium">
               {socialPlatforms.map((platform) => (
                 <a
                   key={platform.name}
@@ -529,13 +529,13 @@ const Footer = () => {
                   className="editorial-link w-fit inline-flex items-center gap-2"
                 >
                   <span
-                    className="inline-flex items-center justify-center w-6 h-6 rounded-md"
+                    className="inline-flex items-center justify-center w-5 sm:w-6 h-5 sm:h-6 rounded-md flex-shrink-0"
                     style={{
                       color: platform.brandColor,
                       backgroundColor: hexToRgba(platform.brandColor, 0.14),
                     }}
                   >
-                    <platform.Icon size={14} />
+                    <platform.Icon size={12} className="sm:w-3.5 sm:h-3.5" />
                   </span>
                   <span>{platform.name}</span>
                 </a>
@@ -543,14 +543,14 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.3em] font-bold text-primary mb-8">Legal</h4>
-            <div className="flex flex-col gap-4 text-sm font-medium">
+            <h4 className="text-[9px] sm:text-[11px] uppercase tracking-[0.3em] font-bold text-primary mb-4 sm:mb-8">Legal</h4>
+            <div className="flex flex-col gap-3 sm:gap-4 text-xs sm:text-sm font-medium">
               <a href="#" className="editorial-link w-fit">Privacy Policy</a>
               <a href="#" className="editorial-link w-fit">Terms of Service</a>
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center mt-12 gap-8 text-[11px] uppercase tracking-[0.2em] font-bold text-primary/40">
+        <div className="flex flex-col sm:flex-row justify-between items-center mt-8 sm:mt-12 gap-4 sm:gap-8 text-[9px] sm:text-[11px] uppercase tracking-[0.2em] font-bold text-primary/40 text-center sm:text-left">
           <span>© 2024 Waflie Cafe. All Rights Reserved.</span>
           <span>Open Mon-Sun — 10:00 to 22:00</span>
         </div>
